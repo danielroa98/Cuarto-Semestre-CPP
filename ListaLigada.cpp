@@ -21,6 +21,12 @@ public:
     Node* next;
 };
 
+void print(*Node node){
+
+
+
+}
+
 int main(){
 
     /*
@@ -35,7 +41,9 @@ int main(){
 
     Node* nodeEight = new Node();
     nodeEight -> value = 8;
-    nodo -> next = nodeEight;
+    node -> next = nodeEight;
 
-
+    Node* nodeNine = new Node();
+    nodeNine -> value = 9;
+    nodeEight -> next(NodeNine);
 }
