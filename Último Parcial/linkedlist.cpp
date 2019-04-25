@@ -122,7 +122,26 @@ public:
             return traverse(node->next);
     }
 	
-	
+	void modify(int position, T val){
+        Node<T>* temp = root;
+        if (position==0)
+        {
+            root -> value = val;
+        }else
+        {
+            for (int i = 0; i < position; i++)
+            {
+                if (temp->next!=NULL)
+                {
+                    temp = temp -> next;
+                } else{
+                    cout<<"Incorrect position"<<endl;
+                    return;
+                }               
+            }
+            temp->value=val;
+        }
+    }
 	
 	void printList(){
 		recursivePrint(root);
@@ -141,7 +160,8 @@ int main()
     nodeNine->value = 35;
     nodeEight->next = nodeNine;
     recursivePrint(node);*/
-	LinkedList<int> l;
+	
+    LinkedList<int> l;
 	l.add(5);
 	l.add(4);
 	l.add(10);
@@ -154,4 +174,5 @@ int main()
 	l.printList();
 	cout<<endl;
     return 0;
+
 }

@@ -1,0 +1,1 @@
+g++ nombre_del_archivo.cpp -o nombre_del_archivo_a_crear
